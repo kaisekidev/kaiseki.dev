@@ -1,0 +1,16 @@
+@import 'tailwindcss/base';
+@import './prism.css';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  [inert] ::-webkit-scrollbar {
+    display: none;
+  }
+
+  :root {
+    --color-primary: 351deg 100% 33%;
+    --color-light: 127deg 40% 99%;
+    --color-dark: 216deg 29% 8%;
+  }
+}

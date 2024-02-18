@@ -1,6 +1,5 @@
 import { type Metadata } from 'next';
 import { Inter, Teko } from 'next/font/google';
-import localFont from 'next/font/local';
 import clsx from 'clsx';
 
 import { Providers } from '@/app/providers';
@@ -22,13 +21,6 @@ const display = Teko({
   display: 'swap',
   variable: '--font-display',
 });
-
-// Use local version of Lexend so that we can use OpenType features
-// const display = localFont({
-//   src: '../fonts/fira-sans-800.woff2',
-//   display: 'swap',
-//   variable: '--font-display',
-// });
 
 export const metadata: Metadata = {
   title: {

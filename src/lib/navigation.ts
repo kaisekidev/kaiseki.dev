@@ -1,9 +1,7 @@
 export const navigation = [
   {
     title: 'Introduction',
-    links: [
-      { title: 'Getting started', href: '/' },
-    ],
+    links: [{ title: 'Getting started', href: '/' }],
   },
   {
     title: 'Core concepts',
@@ -14,8 +12,5 @@ export const navigation = [
   },
   {
     title: 'Packages',
-    links: [
-      { title: 'Example Package', href: '/docs/example-package' },
-    ],
   },
-]
+];

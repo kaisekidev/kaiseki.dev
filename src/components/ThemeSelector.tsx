@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import clsx from 'clsx';
+import { Listbox } from '@headlessui/react'
 
 const themes = [
   { name: 'Light', value: 'light', icon: LightIcon },
@@ -87,7 +88,8 @@ export function ThemeSelector(
   }
 
   return (
-    <div className="flex rounded-md p-1.5 ring-1 ring-neutral-200">
+    <>
+    <div className="hidden md:flex rounded-md p-1.5 ring-1 ring-neutral-200">
       {themes.map((t) => {
         return (
           <ThemeSelectorButton
@@ -100,5 +102,63 @@ export function ThemeSelector(
         );
       })}
     </div>
+      <div className="md:hidden">
+      <Listbox as="div" value={theme} onChange={setTheme} {...props}>
+        <Listbox.Label className="sr-only">Theme</Listbox.Label>
+        <Listbox.Button
+          className="flex h-8 w-8 items-center justify-center rounded-md ring-1 ring-neutral-200 dark:ring-inset dark:ring-white/5 "
+          aria-label="Theme"
+        >
+          <LightIcon
+            className={clsx(
+              'h-4 w-4 dark:hidden',
+              theme === 'system' ? 'fill-dark' : 'fill-red-400',
+            )}
+          />
+          <DarkIcon
+            className={clsx(
+              'hidden h-4 w-4 dark:block',
+              theme === 'system' ? 'fill-paper' : 'fill-red-400',
+            )}
+          />
+        </Listbox.Button>
+        <Listbox.Options className="absolute left-1/2 top-full mt-3 w-36 -translate-x-1/2 space-y-1 rounded-md bg-paper p-3 text-sm font-medium shadow-md shadow-black/5 ring-1 ring-black/5 dark:bg-neutral-900 dark:ring-white/5">
+          {themes.map((theme) => (
+            <Listbox.Option
+              key={theme.value}
+              value={theme.value}
+              className={({ active, selected }) =>
+                clsx(
+                  'flex cursor-pointer select-none items-center rounded-[0.625rem] p-1',
+                  {
+                    'text-red-500': selected,
+                    'text-slate-900 dark:text-paper': active && !selected,
+                    'text-slate-700 dark:text-paper': !active && !selected,
+                    'bg-dark/5 dark:bg-paper/20': active,
+                  },
+                )
+              }
+            >
+              {({ selected }) => (
+                <>
+                  <div className="rounded-md bg-paper p-1 ring-1 ring-neutral-200 dark:bg-neutral-900 dark:ring-inset dark:ring-paper/10">
+                    <theme.icon
+                      className={clsx(
+                        'h-4 w-4',
+                        selected
+                          ? 'fill-red-400 dark:fill-red-400'
+                          : 'fill-slate-400',
+                      )}
+                    />
+                  </div>
+                  <div className="ml-3">{theme.name}</div>
+                </>
+              )}
+            </Listbox.Option>
+          ))}
+        </Listbox.Options>
+      </Listbox>
+      </div>
+    </>
   );
 }

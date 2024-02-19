@@ -49,7 +49,7 @@ export function Navigation({
                       'block w-full pl-3.5 before:pointer-events-none before:absolute before:-left-0.5 before:top-1/2 before:h-full before:w-0.5 before:-translate-y-1/2',
                       link.href === pathname
                         ? 'font-semibold text-red-500 before:bg-red-500'
-                        : 'text-neutral-500 before:hidden before:bg-neutral-700 hover:text-neutral-700 hover:before:block dark:text-neutral-400 dark:before:bg-neutral-700 dark:hover:text-neutral-300',
+                        : 'text-neutral-700 before:hidden before:bg-neutral-700 hover:text-neutral-900 hover:before:block dark:text-neutral-200 dark:before:bg-neutral-400 dark:hover:text-white',
                     )}
                   >
                     {link.title}

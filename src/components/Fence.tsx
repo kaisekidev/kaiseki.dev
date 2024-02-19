@@ -1,15 +1,24 @@
 'use client';
 
 import { Fragment } from 'react';
-import { Highlight } from 'prism-react-renderer';
+import {Highlight, Prism} from 'prism-react-renderer';
 
-export function Fence({
+export async function initPhpLanguage() {
+  (typeof global !== "undefined" ? global : window).Prism = Prism;
+  // @ts-ignore
+  await import("prismjs/components/prism-markup-templating");
+  // @ts-ignore
+  await import("prismjs/components/prism-php");
+}
+
+export async function Fence({
   children,
   language,
 }: {
   children: string;
   language: string;
 }) {
+  await initPhpLanguage();
   return (
     <Highlight
       code={children.trimEnd()}

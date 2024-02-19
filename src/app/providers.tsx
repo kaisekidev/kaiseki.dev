@@ -1,7 +1,7 @@
 'use client';
 
 import { ThemeProvider } from 'next-themes';
-import PlausibleProvider from 'next-plausible'
+import PlausibleProvider from 'next-plausible';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const publicDomain = process.env.NEXT_PUBLIC_SITE_DOMAIN?.replace('www.', '');
@@ -11,5 +11,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
     </ThemeProvider>
   );
 
-  return publicDomain ? <PlausibleProvider domain={publicDomain}>{element}</PlausibleProvider> : element;
+  return publicDomain ? (
+    <PlausibleProvider domain={publicDomain}>{element}</PlausibleProvider>
+  ) : (
+    element
+  );
 }

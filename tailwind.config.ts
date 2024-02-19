@@ -23,7 +23,7 @@ export default {
     extend: {
       colors: {
         // primary: 'hsl(var(--color-primary) / <alpha-value>)',
-        paper: 'hsl(var(--color-light) / <alpha-value>)',
+        paper: 'hsl(var(--color-paper) / <alpha-value>)',
         'red': {
           50: 'hsl(var(--color-red-50) / <alpha-value>)',
           100: 'hsl(var(--color-red-100) / <alpha-value>)',

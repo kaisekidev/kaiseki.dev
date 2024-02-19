@@ -63,8 +63,8 @@ function ThemeSelectorButton({
       className={clsx(
         'flex h-8 w-8 items-center justify-center rounded-md',
         selected
-          ? 'bg-dark/5 fill-red-500 dark:bg-paper/20'
-          : 'fill-dark dark:fill-paper',
+          ? 'bg-neutral-900/5 fill-red-500 dark:bg-paper/20'
+          : 'fill-neutral-900 dark:fill-paper',
       )}
       {...props}
     >
@@ -110,7 +110,7 @@ export function ThemeSelector(props: React.ComponentPropsWithoutRef<'div'>) {
             <LightIcon
               className={clsx(
                 'h-4 w-4 dark:hidden',
-                theme === 'system' ? 'fill-dark' : 'fill-red-400',
+                theme === 'system' ? 'fill-neutral-900' : 'fill-red-400',
               )}
             />
             <DarkIcon
@@ -130,9 +130,8 @@ export function ThemeSelector(props: React.ComponentPropsWithoutRef<'div'>) {
                     'flex cursor-pointer select-none items-center rounded-[0.625rem] p-1',
                     {
                       'text-red-500': selected,
-                      'text-slate-900 dark:text-paper': active && !selected,
-                      'text-slate-700 dark:text-paper': !active && !selected,
-                      'bg-dark/5 dark:bg-paper/20': active,
+                      'text-neutral-900 dark:text-paper': !selected,
+                      'bg-neutral-900/5 dark:bg-paper/20': active,
                     },
                   )
                 }
@@ -145,7 +144,7 @@ export function ThemeSelector(props: React.ComponentPropsWithoutRef<'div'>) {
                           'h-4 w-4',
                           selected
                             ? 'fill-red-400 dark:fill-red-400'
-                            : 'fill-slate-400',
+                            : 'fill-neutral-900 dark:fill-paper',
                         )}
                       />
                     </div>

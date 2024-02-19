@@ -446,7 +446,7 @@ export function Search() {
         className="group flex h-6 w-6 items-center justify-center outline-red-500 sm:justify-start md:h-auto md:w-80 md:flex-none md:rounded-md md:py-2.5 md:pl-4 md:pr-3.5 md:text-sm md:ring-1 md:ring-neutral-200 md:hover:ring-neutral-300 lg:w-96 dark:md:bg-neutral-800/75 dark:md:ring-inset dark:md:ring-white/5 dark:md:hover:bg-neutral-700/40 dark:md:hover:ring-neutral-500"
         {...buttonProps}
       >
-        <SearchIcon className="h-5 w-5 flex-none fill-dark group-hover:fill-red-500 md:fill-neutral-400 md:group-hover:fill-neutral-400 dark:fill-paper md:dark:fill-neutral-500" />
+        <SearchIcon className="h-5 w-5 flex-none fill-neutral group-hover:fill-red-500 md:fill-neutral-400 md:group-hover:fill-neutral-400 dark:fill-paper md:dark:fill-neutral-500" />
         <span className="sr-only md:not-sr-only md:ml-2 md:text-neutral-500 md:dark:text-neutral-400">
           Search docs
         </span>

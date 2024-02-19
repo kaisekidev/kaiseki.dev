@@ -62,7 +62,7 @@ function Header({ packages }: { packages: string[] }) {
           className="group"
           aria-label="GitHub"
         >
-          <GitHubIcon className="h-6 w-6 fill-dark group-hover:fill-red-600 dark:fill-paper" />
+          <GitHubIcon className="h-6 w-6 fill-neutral-900 group-hover:fill-red-600 dark:fill-paper" />
         </Link>
       </div>
     </header>

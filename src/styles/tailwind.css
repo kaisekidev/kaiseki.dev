@@ -9,9 +9,18 @@
   }
 
   :root {
-    --color-primary: 351deg 100% 33%;
-    --color-light: 37deg 89% 96%;
-    /*--color-light: 127deg 40% 99%;*/
-    --color-dark: 216deg 29% 8%;
+    --color-paper: 37deg 89% 96%;
+
+    --color-red-50: 7deg 90% 96%;
+    --color-red-100: 7deg 84% 93%;
+    --color-red-200: 7deg 86% 85%;
+    --color-red-300: 7deg 86% 78%;
+    --color-red-400: 7deg 86% 71%;
+    --color-red-500: 7deg 86% 60%;
+    --color-red-600: 7deg 86% 55%;
+    --color-red-700: 7deg 86% 44%;
+    --color-red-800: 7deg 87% 33%;
+    --color-red-900: 7deg 86% 22%;
+    --color-red-950: 8deg 86% 11%;
   }
 }

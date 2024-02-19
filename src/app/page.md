@@ -2,7 +2,7 @@
 title: Getting started
 ---
 
-Learn how to get CacheAdvance set up in your project in under thirty minutes or it's free. {% .lead %}
+Documentation is . {% .lead %}
 
 {% quick-links %}
 

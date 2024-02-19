@@ -170,7 +170,7 @@ function SearchResult({
 
   return (
     <li
-      className="group block cursor-default rounded-md px-3 py-2 aria-selected:bg-neutral-100 dark:aria-selected:bg-neutral-700/30"
+      className="group block cursor-default rounded-md px-3 py-2 aria-selected:bg-white dark:aria-selected:bg-neutral-700/30"
       aria-labelledby={`${id}-hierarchy ${id}-title`}
       {...autocomplete.getItemProps({
         item: result,
@@ -180,7 +180,7 @@ function SearchResult({
       <div
         id={`${id}-title`}
         aria-hidden="true"
-        className="text-sm text-neutral-700 group-aria-selected:text-red-600 dark:text-neutral-300 dark:group-aria-selected:text-red-400"
+        className="text-sm text-neutral-900 group-aria-selected:text-red-600 dark:text-paper dark:group-aria-selected:text-red-400"
       >
         <HighlightQuery text={result.title} query={query} />
       </div>
@@ -369,7 +369,7 @@ function SearchDialog({
         <div className="fixed inset-0 bg-neutral-900/50 backdrop-blur" />
 
         <div className="fixed inset-0 overflow-y-auto px-4 py-4 sm:px-6 sm:py-20 md:py-32 lg:px-8 lg:py-[15vh]">
-          <Dialog.Panel className="mx-auto transform-gpu overflow-hidden rounded-md bg-white shadow-xl sm:max-w-xl dark:bg-neutral-800 dark:ring-1 dark:ring-neutral-700">
+          <Dialog.Panel className="mx-auto transform-gpu overflow-hidden rounded-md bg-paper shadow-xl sm:max-w-xl dark:bg-neutral-900 dark:ring-1 dark:ring-neutral-700">
             <div {...autocomplete.getRootProps({})}>
               <form
                 ref={formRef}
@@ -385,7 +385,7 @@ function SearchDialog({
                 />
                 <div
                   ref={panelRef}
-                  className="border-t border-neutral-200 bg-white px-2 py-3 empty:hidden dark:border-neutral-400/10 dark:bg-neutral-800"
+                  className="border-t border-neutral-200 bg-paper px-2 py-3 empty:hidden dark:border-neutral-400/10 dark:bg-neutral-900"
                   {...autocomplete.getPanelProps({})}
                 >
                   {autocompleteState.isOpen && (

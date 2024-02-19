@@ -63,7 +63,7 @@ function ThemeSelectorButton({
       className={clsx(
         'flex h-8 w-8 items-center justify-center rounded-md',
         selected
-          ? 'bg-neutral-900/5 fill-red-500 dark:bg-paper/20'
+          ? 'bg-neutral-900/5 fill-red-500 dark:bg-paper/10'
           : 'fill-neutral-900 dark:fill-paper',
       )}
       {...props}

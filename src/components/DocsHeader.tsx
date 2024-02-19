@@ -1,6 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
 
 import { navigation } from '@/lib/navigation';
 
@@ -15,7 +16,10 @@ export function DocsHeader({ title }: { title?: string }) {
   }
 
   return (
-    <header className="mb-9 space-y-1">
+    <header className={clsx(
+      'space-y-1',
+      title && 'mb-9'
+    )}>
       {section && (
         <p className="font-display text-xl font-medium text-red-500">
           {section.title}

@@ -16,6 +16,8 @@ export function Prose<T extends React.ElementType = 'div'>({
         'prose prose-slate max-w-none dark:prose-invert dark:text-paper',
         // headings
         'prose-headings:scroll-mt-28 prose-headings:font-display prose-headings:font-normal lg:prose-headings:scroll-mt-[8.5rem]',
+        // H1
+        'prose-h1:text-5xl prose-h2:leading-none',
         // H2
         'prose-h2:text-3xl prose-h2:leading-none',
         // H3

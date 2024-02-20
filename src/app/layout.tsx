@@ -1,6 +1,7 @@
 import { type Metadata } from 'next';
 import { Inter, Teko } from 'next/font/google';
 import clsx from 'clsx';
+import { headers } from 'next/headers'
 
 import { Providers } from '@/app/providers';
 import { Layout } from '@/components/Layout';
@@ -42,6 +43,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const packages = await getPackages();
+  const host = headers().get('x-host');
   return (
     <html
       lang="en"
@@ -49,7 +51,7 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body className="flex min-h-full bg-paper dark:bg-neutral-900">
-        <Providers>
+        <Providers host={host}>
           <Layout packages={packages}>{children}</Layout>
         </Providers>
       </body>

@@ -43,8 +43,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const packages = await getPackages();
-  const host = headers().get("x-host");
-  console.log(host);
+  // const host = headers().get("x-host");
   return (
     <html
       lang="en"
@@ -52,7 +51,7 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body className="flex min-h-full bg-paper dark:bg-neutral-900">
-        <Providers host={host}>
+        <Providers>
           <Layout packages={packages}>{children}</Layout>
         </Providers>
       </body>

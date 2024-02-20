@@ -16,9 +16,11 @@ export function Providers({ host, children }: ProvidersProps) {
     </ThemeProvider>
   );
 
-  return publicDomain && host && publicDomain === host.replace("www.", "") ? (
-    <PlausibleProvider domain={publicDomain}>{element}</PlausibleProvider>
-  ) : (
-    element
-  );
+  return element;
+
+  // return publicDomain && host && publicDomain === host.replace("www.", "") ? (
+  //   <PlausibleProvider domain={publicDomain}>{element}</PlausibleProvider>
+  // ) : (
+  //   element
+  // );
 }

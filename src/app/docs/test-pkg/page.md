@@ -1,6 +1,6 @@
 # kaiseki-test-pkg
 
-Lorem ipsum description.
+Lorem ipsum description. Elit commodo qui laborum id eu ipsum minim dolor enim ipsum.
 
 ## Install
 
